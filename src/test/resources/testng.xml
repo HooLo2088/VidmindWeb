@@ -3,7 +3,7 @@
 <suite name="Suite1" verbose="1">
         <test name="MoviePageTest">
             <packages>
-                <package name="test.java"></package>
+                <package name="C:\Users\38097\IdeaProjects\VidmindWeb\src\test\java"></package>
             </packages>
 
         </test>

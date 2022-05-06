@@ -24,11 +24,11 @@
 
     <dependencies>
 
-<!--        <dependency>-->
-<!--            <groupId>com.github.javafaker</groupId>-->
-<!--            <artifactId>javafaker</artifactId>-->
-<!--            <version>${javafakerVersion}</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>${javafakerVersion}</version>
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
