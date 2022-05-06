@@ -5,10 +5,10 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class LoginPopUp {
 
-    public SelenideElement personAccountButton = $(By.xpath(Credentials.PersonAccountButton));
-    public SelenideElement inputNameField = $(By.xpath(Credentials.InputNameField));
-    public SelenideElement inputPassField = $(By.xpath(Credentials.InputPassField));
-    public SelenideElement loginButtonPopup = $(By.xpath(Credentials.LoginButtonPopup));
+    public SelenideElement personAccountButton = $(By.xpath(Credentials.personAccountButton));
+    public SelenideElement inputNameField = $(By.xpath(Credentials.inputNameField));
+    public SelenideElement inputPassField = $(By.xpath(Credentials.inputPassField));
+    public SelenideElement loginButtonPopup = $(By.xpath(Credentials.loginButtonPopup));
 
     public LoginPopUp clickPersonAccountButton() {
         personAccountButton.click();
@@ -30,13 +30,11 @@ public class LoginPopUp {
         return this;
     }
 
-    public LoginPopUp login(String userName, String userPass) {
+    public MainPage login(String userName, String userPass) {
         this.clickPersonAccountButton();
         this.setUserName(userName);
         this.setUserPass(userPass);
         this.clickLoginButtonPopup();
-        return new LoginPopUp();
+        return new MainPage();
     }
-
-
 }
