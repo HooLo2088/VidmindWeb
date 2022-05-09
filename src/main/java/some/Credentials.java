@@ -25,7 +25,7 @@ public class Credentials {
     public static String headerLoginButton = "//button[@class='btn_login btn link']";
 
     /* Locators for login PopUp */
-    public static String personAccountButton = "//div[@class='step-button ng-star-inserted']]";
+    public static String personAccountButton = "//div[@class='step-button ng-star-inserted']";
     public static String inputNameField = "//input[@formcontrolname='login']";
     public static String inputPassField = "//input[@class='login-input_password ng-untouched ng-pristine ng-invalid']";
     public static String loginButtonPopup = "//button[@class='btn btn-primary btn_login next-step']";
