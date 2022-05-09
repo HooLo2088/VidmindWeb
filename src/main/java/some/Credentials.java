@@ -25,10 +25,10 @@ public class Credentials {
     public static String headerLoginButton = "//button[@class='btn_login btn link']";
 
     /* Locators for login PopUp */
-    public static String personAccountButton = "//*[contains(text(),'Особовим рахунком')]";
+    public static String personAccountButton = "//div[@class='step-button ng-star-inserted']]";
     public static String inputNameField = "//input[@formcontrolname='login']";
     public static String inputPassField = "//input[@class='login-input_password ng-untouched ng-pristine ng-invalid']";
-    public static String loginButtonPopup = "//*[contains(text(),' Увійти ')]";
+    public static String loginButtonPopup = "//button[@class='btn btn-primary btn_login next-step']";
 
     /*locators of player*/
     public static String playerPlayButton = "//button[@class='btn btn-play']";
@@ -44,12 +44,12 @@ public class Credentials {
 //    public static String profilePaymentDetailsButton = "";
 //    public static String profilePersonalDataButton = "";
 //    public static String profileAccountManagementButton = "";
-    public static String profileSignOutButton = "//*[contains(text(),' Вихід ')]";
+    public static String profileSignOutButton = "//ul[@class='menu']/child::li[6]";
 
 
     /* Locators for Movies page */
     public static String moviePlayerPlayButton = "//button[@class='btn btn-accent btn-icon btn-round']";
-    public static String moviePlayButton = "//*[contains(text(),'ДИВИТИСЯ')]";
+    public static String moviePlayButton = "//button[@class='btn btn-primary btn-icon']";
     public static String favoriteButton = "div.asset-favorite";
     public static String likeButton = "div.asset-like";
     public static String likeCounter = "//div[@itemprop='userInteractionCount']";
