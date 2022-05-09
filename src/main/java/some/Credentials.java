@@ -9,6 +9,7 @@ public class Credentials {
     /* Url for content */
     public static String urlMainPage = "https://tv.kyivstar.ua/ua/";
     public static String urlMoviesPage = "https://tv.kyivstar.ua/ua/movie/626f96446a347724cc8c87e1-2019-shahrajki";
+    public static String urlProfilePage = "https://tv.kyivstar.ua/ua/account/info";
 
     /* Locators for header */
     public static String headerLandingPageButton = "div.nav__image";
@@ -43,7 +44,7 @@ public class Credentials {
 //    public static String profilePaymentDetailsButton = "";
 //    public static String profilePersonalDataButton = "";
 //    public static String profileAccountManagementButton = "";
-//    public static String profileSignOut = "";
+    public static String profileSignOutButton = "//*[contains(text(),' Вихід ')]";
 
 
     /* Locators for Movies page */

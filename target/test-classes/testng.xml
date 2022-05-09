@@ -1,12 +1,12 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="Suite1" verbose="1">
-<!--        <test name="MoviePageTest">-->
-<!--            <packages>-->
-<!--                <package name="test.java"></package>-->
-<!--            </packages>-->
+        <test name="suite1.MoviePageTest">
+            <packages>
+                <package name="test.java.suite1"></package>
+            </packages>
 
-<!--        </test>-->
+        </test>
 
     <!--    <test name="HomeWorkFor12">-->
     <!--        <packages>-->

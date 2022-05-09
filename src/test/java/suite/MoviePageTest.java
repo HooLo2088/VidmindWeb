@@ -1,5 +1,6 @@
-package suite1;
+package suite;
 
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import some.Credentials;
@@ -20,11 +21,15 @@ public class MoviePageTest extends BaseTest {
 
     @Test
     public void playMovie() throws InterruptedException {
-
         MoviePage moviePage = BaseTest.openMovies()
                 .clickPlayMovieButton();
-
         Thread.sleep(10000);
     }
 
+
+    @AfterTest
+    public void logOut() throws InterruptedException {
+        MainPage mainPage = BaseTest.openProfile()
+                .logOut();
+    }
 }

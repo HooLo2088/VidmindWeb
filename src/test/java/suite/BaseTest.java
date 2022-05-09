@@ -1,10 +1,11 @@
-package suite1;
+package suite;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import some.Credentials;
 import some.MainPage;
 import some.MoviePage;
+import some.ProfilePage;
 
 public class BaseTest {
 
@@ -20,6 +21,13 @@ public class BaseTest {
         Configuration.timeout = 10000;
         Selenide.open(Credentials.urlMoviesPage);
         return new MoviePage();
+    }
+
+    public static ProfilePage openProfile(){
+        Configuration.startMaximized=true;
+        Configuration.timeout = 10000;
+        Selenide.open(Credentials.urlProfilePage);
+        return new ProfilePage();
     }
 
 

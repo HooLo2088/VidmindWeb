@@ -9,8 +9,10 @@ public class MainPage {
 
     public SelenideElement mainLoginButton = $(By.xpath(Credentials.headerLoginButton));
 
+
     public LoginPopUp summonsLoginPopUp() {
         mainLoginButton.click();
         return new LoginPopUp();
     }
+
 }
