@@ -1,0 +1,1 @@
+{"uuid":"0f64e102-2b7b-42ea-ad54-f3996b6ace7b","name":"VidmindWeb","children":["87a19a69-b548-44c2-b861-971a9ed296dc"],"befores":[{"name":"login","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1651832348566,"stop":1651832362155}],"afters":[],"start":1651832348534,"stop":1651832373270}
