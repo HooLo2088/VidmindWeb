@@ -22,7 +22,7 @@ public class Credentials {
     public static String headerSearchButton = "//i[@class='icon-search-thin']";
     public static String headerLightStartButton = "//i[@class='icon-circle-ellipsis']";
     public static String headerLangButton = "//span[contains(text(),'UA')]";
-    public static String headerLoginButton = "//*[contains(text(),'Увійти')]";
+    public static String headerLoginButton = "//button[@class='btn_login btn link']";
 
     /* Locators for login PopUp */
     public static String personAccountButton = "//*[contains(text(),'Особовим рахунком')]";
