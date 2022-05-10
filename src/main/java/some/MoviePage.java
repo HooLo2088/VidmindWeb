@@ -29,6 +29,13 @@ public class MoviePage {
         return new MoviePage();
     }
 
+    public MoviePage clickLikeButton(){
+        likeButton.click();
+        return this;
+    }
 
+    public String getLikeCounter(){
+       return likeButton.getText();
+    }
 
 }
