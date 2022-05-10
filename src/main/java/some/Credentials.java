@@ -10,6 +10,7 @@ public class Credentials {
     public static String urlMainPage = "https://tv.kyivstar.ua/ua/";
     public static String urlMoviesPage = "https://tv.kyivstar.ua/ua/movie/626f96446a347724cc8c87e1-2019-shahrajki";
     public static String urlProfilePage = "https://tv.kyivstar.ua/ua/account/info";
+    public static String urlFavoriteGroupPage = "https://tv.kyivstar.ua/ua/group/55fab7b4e4b0965ae3ec0022-obrane-video";
 
     /* Locators for header */
     public static String headerLandingPageButton = "div.nav__image";
@@ -50,11 +51,11 @@ public class Credentials {
     /* Locators for Movies page */
     public static String moviePlayerPlayButton = "//button[@class='btn btn-accent btn-icon btn-round']";
     public static String moviePlayButton = "//button[@class='btn btn-primary btn-icon']";
-    public static String favoriteButton = "div.asset-favorite";
-    public static String likeButton = "div.asset-like";
-    public static String likeCounter = "//div[@itemprop='userInteractionCount']";
-    public static String actorIconButton = "//img[@class='actor-avatar']";
-//    public static String * = "";
+    public static String movieFavoriteButton = "div.asset-favorite";
+    public static String movieLikeButton = "div.asset-like";
+    //    public static String movieLikeCounter = "//div[@itemprop='userInteractionCount']";
+    public static String movieActorIconButton = "//div[@itemprop='actor']";
+    public static String movieTitle = "//h1[@class='metadata__title']";
 
     /* Locators for Series page */
 //    public static String * = "";
@@ -65,6 +66,13 @@ public class Credentials {
 
     /* Locators for OnlineTV */
 //    public static String * = "";
+//    public static String * = "";
+//    public static String * = "";
+//    public static String * = "";
+//    public static String * = "";
+
+    /* Locators for ContentGroupPage */
+    public static String favoriteMovieTitle = "//div[@class='poster__details__title text-overflow']";
 //    public static String * = "";
 //    public static String * = "";
 //    public static String * = "";

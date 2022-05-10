@@ -14,7 +14,7 @@ public class MoviePageTest extends BaseTest {
     @BeforeTest
     public void login() throws InterruptedException {
 
-        MainPage mainPage = BaseTest.openMain()
+        MainPage mainPage = BaseTest.openMainPage()
                 .summonsLoginPopUp()
                 .login(Credentials.userLoginName, Credentials.userPassword);
         Thread.sleep(1000);
@@ -22,18 +22,27 @@ public class MoviePageTest extends BaseTest {
 
     @Test
     public void likeCounter(){
-        String BeforeLikeCounter = BaseTest.openMovies().getLikeCounter();
-        MoviePage moviePage = BaseTest.openMovies().clickLikeButton();
-        String AfterLikeCounter = BaseTest.openMovies().getLikeCounter();
-        Integer b = Integer.parseInt(BeforeLikeCounter) + 1;
-        Integer a = Integer.parseInt(AfterLikeCounter);
+        String beforeLikeCounter = BaseTest.openMoviesPage().getLikeCounter();
+        MoviePage moviePage = BaseTest.openMoviesPage().clickLikeButton();
+        String afterLikeCounter = BaseTest.openMoviesPage().getLikeCounter();
+        Integer b = Integer.parseInt(beforeLikeCounter) + 1;
+        Integer a = Integer.parseInt(afterLikeCounter);
         Assert.assertEquals(b, a);
-        MoviePage moviePageAfter = BaseTest.openMovies().clickLikeButton();
+        MoviePage moviePageAfter = BaseTest.openMoviesPage().clickLikeButton();
+    }
+
+    @Test
+    public void addFavoriteMovie(){
+        String movieTitle = BaseTest.openMoviesPage().getMovieTitle();
+        MoviePage moviePage = BaseTest.openMoviesPage().clickFavoriteButton();
+        String favoriteMovieTitle = BaseTest.openFavoriteGroupPage().getFavoriteMovieTitle();
+        Assert.assertEquals(movieTitle, favoriteMovieTitle);
+        MoviePage moviePageAfter = BaseTest.openMoviesPage().clickFavoriteButton();
     }
 
     @Test
     public void playMovie() throws InterruptedException {
-        MoviePage moviePage = BaseTest.openMovies()
+        MoviePage moviePage = BaseTest.openMoviesPage()
                 .clickPlayMovieButton();
         Thread.sleep(10000);
     }
@@ -41,7 +50,7 @@ public class MoviePageTest extends BaseTest {
 
     @AfterTest
     public void logOut() throws InterruptedException {
-        MainPage mainPage = BaseTest.openProfile()
+        MainPage mainPage = BaseTest.openProfilePage()
                 .logOut();
     }
 }
