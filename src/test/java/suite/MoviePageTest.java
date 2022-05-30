@@ -21,7 +21,14 @@ public class MoviePageTest extends BaseTest {
     }
 
     @Test
-    public void likeCounter(){
+    public void getTimestampCurrent() throws InterruptedException {
+        String currentTime = BaseTest.openMoviesPage().clickPlayMovieButton().getTimestampCurrent();
+
+        System.out.println(currentTime);
+    }
+
+    @Test
+    public void likeMovie(){
         String beforeLikeCounter = BaseTest.openMoviesPage().getLikeCounter();
         MoviePage moviePage = BaseTest.openMoviesPage().clickLikeButton();
         String afterLikeCounter = BaseTest.openMoviesPage().getLikeCounter();
@@ -44,7 +51,7 @@ public class MoviePageTest extends BaseTest {
     public void playMovie() throws InterruptedException {
         MoviePage moviePage = BaseTest.openMoviesPage()
                 .clickPlayMovieButton();
-        Thread.sleep(10000);
+
     }
 
 

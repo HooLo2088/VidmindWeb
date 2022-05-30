@@ -40,6 +40,7 @@ public class Credentials {
     public static String playerPicInPicButton = "//i[@class='icon-picture-in-picture']";
     public static String playerSettingButton = "//i[@class='icon-settings']";
     public static String playerExpandButton = "//i[@class='icon-expand']";
+    public static String playerTimestampCurrent = "//label[@class='timestamp timestamp_current']";
 
     /* Locators for Profile page */
 //    public static String profilePaymentDetailsButton = "";
@@ -53,7 +54,6 @@ public class Credentials {
     public static String moviePlayButton = "//button[@class='btn btn-primary btn-icon']";
     public static String movieFavoriteButton = "div.asset-favorite";
     public static String movieLikeButton = "div.asset-like";
-    //    public static String movieLikeCounter = "//div[@itemprop='userInteractionCount']";
     public static String movieActorIconButton = "//div[@itemprop='actor']";
     public static String movieTitle = "//h1[@class='metadata__title']";
 

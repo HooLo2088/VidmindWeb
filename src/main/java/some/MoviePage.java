@@ -1,5 +1,6 @@
 package some;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
@@ -10,23 +11,28 @@ public class MoviePage {
     /*locators for movie page */
     public SelenideElement favoriteButton = $(Credentials.movieFavoriteButton);
     public SelenideElement likeButton = $(Credentials.movieLikeButton);
-    //    public SelenideElement likeCounter = $(By.xpath(Credentials.likeCounter));
     public SelenideElement actorIconButton = $(By.xpath(Credentials.movieActorIconButton));
     public SelenideElement playButton = $(By.xpath(Credentials.moviePlayButton));
     public SelenideElement title = $(By.xpath(Credentials.movieTitle));
 
     /*locators for movie player */
-    public SelenideElement playerPlayButton = $(By.xpath(Credentials.moviePlayButton));
+    public SelenideElement playerPlayButton = $(By.xpath(Credentials.playerPlayButton));
 //    public SelenideElement  = $()
 //    public SelenideElement  = $()
 //    public SelenideElement  = $()
 //    public SelenideElement  = $()
 //    public SelenideElement  = $()
-//    public SelenideElement  = $()
+    public SelenideElement playerTimestampCurrent = $(By.xpath(Credentials.playerTimestampCurrent));
 
-    public MoviePage clickPlayMovieButton() {
+    public String getTimestampCurrent(){
+        return playerTimestampCurrent.shouldBe(Condition.visible).getText();
+    }
+
+    public MoviePage clickPlayMovieButton() throws InterruptedException {
         playButton.click();
+        Thread.sleep(6000);
         return new MoviePage();
+
     }
 
     public MoviePage clickLikeButton() {
