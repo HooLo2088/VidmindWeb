@@ -31,9 +31,9 @@ public class MoviePageTest extends BaseTest {
         String beforeLikeCounter = BaseTest.openMoviesPage().getLikeCounter();
         MoviePage moviePage = BaseTest.openMoviesPage().clickLikeButton();
         String afterLikeCounter = BaseTest.openMoviesPage().getLikeCounter();
-        Integer b = Integer.parseInt(beforeLikeCounter) + 1;
+        Integer b = Integer.parseInt(beforeLikeCounter) + 10;
         Integer a = Integer.parseInt(afterLikeCounter);
-        Assert.assertNotEquals(b, a);
+        Assert.assertEquals(b, a);
         MoviePage moviePageAfter = BaseTest.openMoviesPage().clickLikeButton();
     }
 
