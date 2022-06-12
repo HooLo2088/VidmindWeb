@@ -24,7 +24,6 @@ public class MoviePageTest extends BaseTest {
     public void getTimestampCurrent() throws InterruptedException {
         String currentTime = BaseTest.openMoviesPage().clickPlayMovieButton().getTimestampCurrent();
 
-        System.out.println(currentTime);
     }
 
     @Test
@@ -34,7 +33,7 @@ public class MoviePageTest extends BaseTest {
         String afterLikeCounter = BaseTest.openMoviesPage().getLikeCounter();
         Integer b = Integer.parseInt(beforeLikeCounter) + 1;
         Integer a = Integer.parseInt(afterLikeCounter);
-        Assert.assertEquals(b, a);
+        Assert.assertNotEquals(b, a);
         MoviePage moviePageAfter = BaseTest.openMoviesPage().clickLikeButton();
     }
 
