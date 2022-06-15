@@ -7,14 +7,9 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class ContentGroupPage {
 
-    /* methods for Favorite Group page */
     public SelenideElement cgAssetName = $(By.xpath(Credentials.CGassetName));
 
     public String getAssetName(){
         return cgAssetName.getText();
     }
-
-    /* methods for Continue Watching Group page */
-
-
 }
