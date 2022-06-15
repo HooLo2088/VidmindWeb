@@ -34,4 +34,10 @@ public class BaseTest {
         return new ContentGroupPage();
     }
 
+    public static ContentGroupPage openCAmovies(){
+        Configuration.startMaximized=true;
+        Configuration.timeout = 10000;
+        Selenide.open(Credentials.urlCAmovies);
+        return new ContentGroupPage();
+    }
 }

@@ -11,6 +11,7 @@ public class Credentials {
     public static String urlMoviesPage = "https://tv.kyivstar.ua/ua/movie/626f96446a347724cc8c87e1-2019-shahrajki";
     public static String urlProfilePage = "https://tv.kyivstar.ua/ua/account/info";
     public static String urlFavoriteGroupPage = "https://tv.kyivstar.ua/ua/group/55fab7b4e4b0965ae3ec0022-obrane-video";
+    public static String urlCAmovies = "https://tv.kyivstar.ua/ua/movies";
 
     /* Locators for header */
     public static String headerLandingPageButton = "div.nav__image";
@@ -24,6 +25,11 @@ public class Credentials {
     public static String headerLightStartButton = "//i[@class='icon-circle-ellipsis']";
     public static String headerLangButton = "//span[contains(text(),'UA')]";
     public static String headerLoginButton = "//button[@class='btn_login btn link']";
+
+    /* Locators for search PopUp*/
+    public static String searchInputField = "//input[@formcontrolname='term']";
+    public static String searchFirstAssetName = "//div[@class='asset-name text-overflow']";
+
 
     /* Locators for login PopUp */
     public static String personAccountButton = "//div[@class='step-button ng-star-inserted']";
@@ -72,7 +78,7 @@ public class Credentials {
 //    public static String * = "";
 
     /* Locators for ContentGroupPage */
-    public static String favoriteMovieTitle = "//div[@class='poster__details__title text-overflow']";
+    public static String CGassetName = "//div[@class='poster__details__title text-overflow']";
 //    public static String * = "";
 //    public static String * = "";
 //    public static String * = "";

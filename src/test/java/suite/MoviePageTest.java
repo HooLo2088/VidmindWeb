@@ -21,6 +21,15 @@ public class MoviePageTest extends BaseTest {
     }
 
     @Test
+    public void searchTest (){
+        String beforeFirstAssetName = BaseTest.openCAmovies().getAssetName();
+        System.out.println(beforeFirstAssetName);
+        String afterSearchAssetName = BaseTest.openMainPage().summosSearchPopUp().setSearchName(beforeFirstAssetName).getAssetName();
+        System.out.println(afterSearchAssetName);
+        Assert.assertEquals(beforeFirstAssetName, afterSearchAssetName);
+    }
+
+    @Test
     public void getTimestampCurrent() throws InterruptedException {
         String currentTime = BaseTest.openMoviesPage().clickPlayMovieButton().getTimestampCurrent();
 
@@ -41,7 +50,7 @@ public class MoviePageTest extends BaseTest {
     public void addFavoriteMovie(){
         String movieTitle = BaseTest.openMoviesPage().getMovieTitle();
         MoviePage moviePage = BaseTest.openMoviesPage().clickFavoriteButton();
-        String favoriteMovieTitle = BaseTest.openFavoriteGroupPage().getFavoriteMovieTitle();
+        String favoriteMovieTitle = BaseTest.openFavoriteGroupPage().getAssetName();
         Assert.assertEquals(movieTitle, favoriteMovieTitle);
         MoviePage moviePageAfter = BaseTest.openMoviesPage().clickFavoriteButton();
     }
