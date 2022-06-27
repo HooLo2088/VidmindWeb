@@ -21,9 +21,14 @@ public class DemoTest extends BaseTest {
     }
 
     @Test
+    public void catchUpLive() throws InterruptedException {
+        String timeStampLiveChannel = BaseTest.openLiveTv().clickCatchUp().getTimeStampCurrent();
+        Assert.assertNotEquals(timeStampLiveChannel,"00:00:00");
+    }
+
+    @Test
     public void liveChannel() throws InterruptedException {
-        String liveChannel = BaseTest.openMainPage().clickCaLiveTv()
-                .getLiveIcon();
+        String liveChannel = BaseTest.openMainPage().clickCaLiveTv().mouseMoveInPlayer().getLiveIcon();
         Assert.assertEquals(liveChannel, "LIVE");
     }
 

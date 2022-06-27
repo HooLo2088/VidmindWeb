@@ -17,7 +17,7 @@ public class Credentials {
     public static String urlProductPage = "https://webng.dev.vidmind.com/ua/account/packages";
     public static String urlFavoriteGroupPage = "https://webng.dev.vidmind.com/ua/MyVideo";
     public static String urlCAmovies = "https://webng.dev.vidmind.com/ua/movies";
-    public static String urlLiveTv = "https://webng.dev.vidmind.com/ua/live-channels/55f2bcefe4b0781039beb055-1-1-hd";
+    public static String urlLiveTv = "https://webng.dev.vidmind.com/en/live-channels/620cb9b3e3f44818e01eca97-testvirtfreeano";
 
     /* Locators for header */
     public static String headerLandingPageButton = "div.nav__image";
@@ -54,6 +54,9 @@ public class Credentials {
     public static String playerSettingButton = "//i[@class='icon-settings']";
     public static String playerExpandButton = "//i[@class='icon-expand']";
     public static String playerTimestampCurrent = "//label[@class='timestamp timestamp_current']";
+    public static String playerBackToLiveButton = "//div[@class='live start-over']";
+    public static String playerCatchUpPlay = "//div[@class='program-list__actions ng-tns-c15-1 ng-star-inserted']";
+
 
     /* Locators for Profile page */
     public static String profilePaymentDetailsButton = "//ul[@class='menu']/child::li[2]";
