@@ -17,11 +17,11 @@ public class MoviePage {
 
     /*locators for movie player */
     public SelenideElement playerPlayButton = $(By.xpath(Credentials.playerPlayButton));
-//    public SelenideElement  = $()
-//    public SelenideElement  = $()
-//    public SelenideElement  = $()
-//    public SelenideElement  = $()
-//    public SelenideElement  = $()
+//    public SelenideElement  = $();
+//    public SelenideElement  = $();
+//    public SelenideElement  = $();
+//    public SelenideElement  = $();
+//    public SelenideElement  = $();
     public SelenideElement playerTimestampCurrent = $(By.xpath(Credentials.playerTimestampCurrent));
 
     public String getTimestampCurrent(){
@@ -31,8 +31,7 @@ public class MoviePage {
     public MoviePage clickPlayMovieButton() throws InterruptedException {
         playButton.click();
         Thread.sleep(6000);
-        return new MoviePage();
-
+        return this;
     }
 
     public MoviePage clickLikeButton() {

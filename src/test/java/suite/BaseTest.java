@@ -23,7 +23,7 @@ public class BaseTest {
     public static ProfilePage openProfilePage(){
         Configuration.startMaximized=true;
         Configuration.timeout = 10000;
-        Selenide.open(Credentials.urlProfilePage);
+        Selenide.open(Credentials.urlProductPage);
         return new ProfilePage();
     }
 
@@ -39,5 +39,13 @@ public class BaseTest {
         Configuration.timeout = 10000;
         Selenide.open(Credentials.urlCAmovies);
         return new ContentGroupPage();
+    }
+
+    public static LiveTvPage openLiveTv() throws InterruptedException {
+        Configuration.startMaximized=true;
+        Configuration.timeout = 10000;
+        Selenide.open(Credentials.urlLiveTv);
+        return new LiveTvPage();
+
     }
 }

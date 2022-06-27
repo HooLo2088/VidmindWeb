@@ -9,7 +9,7 @@ import some.MainPage;
 import some.MoviePage;
 
 
-public class MoviePageTest extends BaseTest {
+public class DemoTest extends BaseTest {
 
     @BeforeTest
     public void login() throws InterruptedException {
@@ -17,7 +17,49 @@ public class MoviePageTest extends BaseTest {
         MainPage mainPage = BaseTest.openMainPage()
                 .summonsLoginPopUp()
                 .login(Credentials.userLoginName, Credentials.userPassword);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
+    }
+
+    @Test
+    public void liveChannel() throws InterruptedException {
+        String liveChannel = BaseTest.openMainPage().clickCaLiveTv()
+                .getLiveIcon();
+        Assert.assertEquals(liveChannel, "LIVE");
+    }
+
+    @Test
+    public void disableProduct(){
+        String popUpPackageCancel = BaseTest
+                .openProfilePage()
+                .openMyProduct()
+                .clickHowDisableProduct()
+                .clickContinueDisable()
+                .leftDescDisable("I want to disable the product")
+                .clickPopUpDisableDone()
+                .getPackageCancel();
+        Assert.assertEquals(popUpPackageCancel, "Пакет відключено");
+    }
+
+    @Test
+    public void buyProduct(){
+        String popUpDone = BaseTest.openProfilePage()
+                .clickProduct()
+                .clickBuyProductButton()
+                .clickRegularPriceProductButton()
+                .clickBuyForUahButton()
+                .getDone();
+        Assert.assertEquals(popUpDone, "Готово!");
+    }
+
+    @Test
+    public void addNewCard(){
+        String myCardNumber = BaseTest.openMainPage()
+                .openProfilePage()
+                .openProfilePaymentDetails()
+                .addNewPaymentsCardButton()
+                .addNewCardCred(Credentials.cardNumber, Credentials.cardExpDate, Credentials.cardCvv)
+                .getMyCardNumber();
+        Assert.assertEquals(myCardNumber, "444433******1111");
     }
 
     @Test
@@ -30,9 +72,9 @@ public class MoviePageTest extends BaseTest {
     }
 
     @Test
-    public void getTimestampCurrent() throws InterruptedException {
+    public void playMovie() throws InterruptedException {
         String currentTime = BaseTest.openMoviesPage().clickPlayMovieButton().getTimestampCurrent();
-
+        Assert.assertNotEquals(currentTime,"00:00:00");
     }
 
     @Test
@@ -54,14 +96,6 @@ public class MoviePageTest extends BaseTest {
         Assert.assertEquals(movieTitle, favoriteMovieTitle);
         MoviePage moviePageAfter = BaseTest.openMoviesPage().clickFavoriteButton();
     }
-
-    @Test
-    public void playMovie() throws InterruptedException {
-        MoviePage moviePage = BaseTest.openMoviesPage()
-                .clickPlayMovieButton();
-
-    }
-
 
     @AfterTest
     public void logOut() throws InterruptedException {
