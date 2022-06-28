@@ -10,7 +10,8 @@ public class ContentGroupPage {
     /* methods for Favorite Group page */
     public SelenideElement cgAssetName = $(By.xpath(Credentials.CGassetName));
 
-    public String getAssetName(){
+    public String getAssetName() throws InterruptedException {
+        Thread.sleep(1000);
         return cgAssetName.getText();
     }
 

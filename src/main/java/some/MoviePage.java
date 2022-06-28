@@ -25,12 +25,12 @@ public class MoviePage {
     public SelenideElement playerTimestampCurrent = $(By.xpath(Credentials.playerTimestampCurrent));
 
     public String getTimestampCurrent(){
-        return playerTimestampCurrent.shouldBe(Condition.visible).getText();
+        return playerTimestampCurrent.getText();
     }
 
     public MoviePage clickPlayMovieButton() throws InterruptedException {
         playButton.click();
-        Thread.sleep(10000);
+        Thread.sleep(15000);
         return this;
     }
 

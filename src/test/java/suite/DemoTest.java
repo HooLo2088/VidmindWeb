@@ -68,7 +68,7 @@ public class DemoTest extends BaseTest {
     }
 
     @Test
-    public void searchTest (){
+    public void searchTest () throws InterruptedException {
         String beforeFirstAssetName = BaseTest.openCAmovies().getAssetName();
         System.out.println(beforeFirstAssetName);
         String afterSearchAssetName = BaseTest.openMainPage().summosSearchPopUp().setSearchName(beforeFirstAssetName).getAssetName();
@@ -94,7 +94,7 @@ public class DemoTest extends BaseTest {
     }
 
     @Test
-    public void addFavoriteMovie(){
+    public void addFavoriteMovie() throws InterruptedException {
         String movieTitle = BaseTest.openMoviesPage().getMovieTitle();
         MoviePage moviePage = BaseTest.openMoviesPage().clickFavoriteButton();
         String favoriteMovieTitle = BaseTest.openFavoriteGroupPage().getAssetName();
