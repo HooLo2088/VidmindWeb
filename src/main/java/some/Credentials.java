@@ -15,7 +15,7 @@ public class Credentials {
     public static String urlMainPage = "https://webng.dev.vidmind.com/ua/";
     public static String urlMoviesPage = "https://webng.dev.vidmind.com/ua/movie/61e165314eb4fe61f9015b04-2018-za-mrieyu";
     public static String urlProductPage = "https://webng.dev.vidmind.com/ua/account/packages";
-    public static String urlFavoriteGroupPage = "https://webng.dev.vidmind.com/ua/MyVideo";
+    public static String urlFavoriteGroupPage = "https://webng.dev.vidmind.com/ua/group/55fab7b4e4b0965ae3ec0022-obrane-video";
     public static String urlCAmovies = "https://webng.dev.vidmind.com/ua/movies";
     public static String urlLiveTv = "https://webng.dev.vidmind.com/en/live-channels/620cb9b3e3f44818e01eca97-testvirtfreeano";
 

@@ -30,7 +30,7 @@ public class MoviePage {
 
     public MoviePage clickPlayMovieButton() throws InterruptedException {
         playButton.click();
-        Thread.sleep(6000);
+        Thread.sleep(10000);
         return this;
     }
 
