@@ -46,6 +46,12 @@ public class BaseTest {
         Configuration.timeout = 10000;
         Selenide.open(Credentials.urlLiveTv);
         return new LiveTvPage();
+    }
 
+    public static LiveTvPage openVirtLiveTv() throws InterruptedException {
+        Configuration.startMaximized=true;
+        Configuration.timeout = 10000;
+        Selenide.open(Credentials.urlVirtLiveTv);
+        return new LiveTvPage();
     }
 }

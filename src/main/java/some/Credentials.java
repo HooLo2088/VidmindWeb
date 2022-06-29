@@ -17,7 +17,8 @@ public class Credentials {
     public static String urlProductPage = "https://webng.dev.vidmind.com/ua/account/packages";
     public static String urlFavoriteGroupPage = "https://webng.dev.vidmind.com/ua/group/55fab7b4e4b0965ae3ec0022-obrane-video";
     public static String urlCAmovies = "https://webng.dev.vidmind.com/ua/movies";
-    public static String urlLiveTv = "https://webng.dev.vidmind.com/en/live-channels/620cb9b3e3f44818e01eca97-testvirtfreeano";
+    public static String urlLiveTv = "https://webng.dev.vidmind.com/ua/live-channels/55f2bcefe4b0781039beb055-1-1-hd";
+    public static String urlVirtLiveTv = "https://webng.dev.vidmind.com/en/live-channels/620cb9b3e3f44818e01eca97-testvirtfreeano";
 
     /* Locators for header */
     public static String headerLandingPageButton = "div.nav__image";
@@ -98,7 +99,7 @@ public class Credentials {
 
     /* Locators for OnlineTV */
     public static String liveIcon = "//label[@class='timestamp timestamp_left']";
-//    public static String * = "";
+    public static String liveChannel = "//img[@alt='1+1 HD']";
 //    public static String * = "";
 //    public static String * = "";
 //    public static String * = "";

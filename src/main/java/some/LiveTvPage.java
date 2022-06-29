@@ -12,9 +12,15 @@ public class LiveTvPage {
         public SelenideElement catchUpPlayButton = $(By.xpath(Credentials.playerCatchUpPlay));
         public SelenideElement backToLiveButton = $(By.xpath(Credentials.playerBackToLiveButton));
         public SelenideElement timeStampCurrent = $(By.xpath(Credentials.playerTimestampCurrent));
+        public SelenideElement liveChannelButton = $(By.xpath(Credentials.liveChannel));
 //        public SelenideElement  = $(By.xpath(Credentials.));
 //        public SelenideElement  = $(By.xpath(Credentials.));
-//        public SelenideElement  = $(By.xpath(Credentials.));
+
+    public LiveTvPage clickLiveChannel() throws InterruptedException {
+        liveChannelButton.click();
+        Thread.sleep(5000);
+        return this;
+    }
 
    public String getTimeStampCurrent() throws InterruptedException {
        Thread.sleep(5000);

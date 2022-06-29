@@ -17,18 +17,24 @@ public class DemoTest extends BaseTest {
         MainPage mainPage = BaseTest.openMainPage()
                 .summonsLoginPopUp()
                 .login(Credentials.userLoginName, Credentials.userPassword);
-        Thread.sleep(2000);
+        Thread.sleep(5000);
     }
 
     @Test
     public void catchUpLive() throws InterruptedException {
-        String timeStampLiveChannel = BaseTest.openLiveTv().clickCatchUp().getTimeStampCurrent();
+        String timeStampLiveChannel = BaseTest.openVirtLiveTv()
+                .clickCatchUp()
+                .getTimeStampCurrent();
         Assert.assertNotEquals(timeStampLiveChannel,"00:00:00");
     }
 
     @Test
     public void liveChannel() throws InterruptedException {
-        String liveChannel = BaseTest.openMainPage().clickCaLiveTv().mouseMoveInPlayer().getLiveIcon();
+        String liveChannel = BaseTest.openMainPage()
+                .clickCaLiveTv()
+                .clickLiveChannel()
+                .mouseMoveInPlayer()
+                .getLiveIcon();
         Assert.assertEquals(liveChannel, "LIVE");
     }
 
@@ -70,9 +76,7 @@ public class DemoTest extends BaseTest {
     @Test
     public void searchTest () throws InterruptedException {
         String beforeFirstAssetName = BaseTest.openCAmovies().getAssetName();
-        System.out.println(beforeFirstAssetName);
         String afterSearchAssetName = BaseTest.openMainPage().summosSearchPopUp().setSearchName(beforeFirstAssetName).getAssetName();
-        System.out.println(afterSearchAssetName);
         Assert.assertEquals(beforeFirstAssetName, afterSearchAssetName);
     }
 
