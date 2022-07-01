@@ -7,7 +7,7 @@ public class SearchTest extends BaseTest {
 
     @Test
     public void searchTest (){
-        String beforeFirstAssetName = BaseTest.openCAmovies().getAssetName();
+        String beforeFirstAssetName = BaseTest.openMainPage().getAssetName();
         String afterSearchAssetName = BaseTest.openMainPage().summosSearchPopUp().setSearchName(beforeFirstAssetName).getAssetName();
         Assert.assertEquals(beforeFirstAssetName, afterSearchAssetName);
     }
