@@ -1,0 +1,48 @@
+
+pipeline {
+    agent {
+        docker {
+            image 'maven:3.8.4-openjdk-11-slim'
+            //reuseNode true
+            label any
+//             args """--privileged -u root
+//                 -e HTTP_PROXY=${HTTP_PROXY}
+//                 -e HTTPS_PROXY=${HTTPS_PROXY}"""
+        }
+    }
+    environment {
+        // TG
+//         TELEGRAM_CHANNEL = credentials('TELEGRAM_CH')
+//         TELEGRAM_BOT = credentials('TELEGRAM_BOT')
+
+        TELEGRAM_CHANNEL = "-1001638047107"
+        TELEGRAM_BOT = "bot5573621883:AAFwViHI8K4wX2qXSYmS0udw67DKgvTQgZM"
+    }
+    stages {
+
+        stage('TEST stage') {
+            steps {
+                script{
+                    sh """
+                        env
+                        mvn test
+                    """
+                }
+            }
+        }
+    }
+   post {
+        failure {
+              sh"""
+               sh ./build/msg.sh ${TELEGRAM_BOT} ${TELEGRAM_CHANNEL} FAILURE
+               rm -rf ${WORKSPACE}/*
+              """
+        }
+        success {
+              sh"""
+              sh ./build/msg.sh ${TELEGRAM_BOT} ${TELEGRAM_CHANNEL} SUCCESS
+              rm -rf ${WORKSPACE}/*
+              """
+        }
+    }
+}
