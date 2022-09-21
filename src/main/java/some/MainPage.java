@@ -5,20 +5,27 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
+
 public class MainPage {
 
-    public SelenideElement mainSearchButton = $(By.xpath(Credentials.headerSearchButton));
-    public SelenideElement cgAssetName = $(By.xpath(Credentials.CGassetName));
 
+    public SelenideElement userNameField = $(By.xpath(Credentials.userNameField));
+    public SelenideElement passField = $(By.xpath(Credentials.passField));
+    public SelenideElement loginButton = $(By.xpath(Credentials.loginButton));
 
-    public SearchPopUp summosSearchPopUp(){
-        mainSearchButton.click();
-        return new SearchPopUp();
+    public MainPage setUserName(String userName) {
+        userNameField.sendKeys(userName);
+        return this;
     }
 
+    public MainPage setPass(String pass) {
+        passField.sendKeys(pass);
+        return this;
+    }
 
-
-    public String getAssetName(){
-        return cgAssetName.getText();
+    public MailPage clickLoginButton() {
+        loginButton.click();
+        return new MailPage();
     }
 }
+

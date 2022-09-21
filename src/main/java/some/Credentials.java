@@ -2,21 +2,16 @@ package some;
 
 public class Credentials {
 
+    public static String userName = "m.petrushko";
+    public static String pass = "Ghbdtn2088";
+
     /* Url for content */
-    public static String urlMainPage = "https://tv.kyivstar.ua/ua/";
-    public static String urlCAmovies = "https://tv.kyivstar.ua/ua/movies";
+    public static String urlMainPage = "https://mail.1plus1.net/owa/#path=/mail";
 
-    /* Locators for header */
-    public static String headerSearchButton = "//i[@class='icon-search-thin']";
-
-    /* Locators for search PopUp*/
-    public static String searchInputField = "//input[@formcontrolname='term']";
-    public static String searchFirstAssetName = "//div[@class='asset-name text-overflow']";
-
-    /* Locators for Profile page */
-    public static String profileSignOutButton = "//ul[@class='menu']/child::li[6]";
-
-    /* Locators for ContentGroupPage */
-    public static String CGassetName = "//div[@class='poster__details__title text-overflow']";
+    /* Locators for mailPage */
+    public static String userNameField = "//input[@id='username']";
+    public static String passField = "//input[@id='password']";
+    public static String loginButton = "//div[@onclick='clkLgn()']";
+    public static String spleshCounter = "//div[@class='_n_44 ms-bg-color-neutralLighter']";
 
 }
