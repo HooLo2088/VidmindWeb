@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import some.Credentials;
 
-public class SearchTest extends BaseTest {
+public class SpleshTest extends BaseTest {
 
     @Test
     public void spleshTest() {
